@@ -1,0 +1,18 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: treactor-kpt
+  annotations:
+    config.kubernetes.io/local-config: "true"
+info:
+  description: Treactor - The Telemetry Reactor
+pipeline:
+  mutators:
+    - image: gcr.io/treactor/kpt-fn/create-atoms:v0.6
+      configPath: fn_create-atoms.yaml
+    - image: gcr.io/treactor/kpt-fn/gateway-api:v0.6
+      configPath: fn_gateway-api.yaml
+    - image: gcr.io/treactor/kpt-fn/ensure-sa:v0.6
+    - image: gcr.io/treactor/kpt-fn/ensure-telemetry:v0.6
+    - image: gcr.io/kpt-fn/set-namespace:v0.4.1
+      configPath: fn_set-namespace.yaml
