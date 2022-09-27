@@ -15,4 +15,4 @@ pipeline:
     - image: gcr.io/treactor/kpt-fn/ensure-sa:unstable
     - image: gcr.io/treactor/kpt-fn/ensure-telemetry:unstable
     - image: gcr.io/kpt-fn/set-namespace:v0.4.1
-      configPath: fn_set-namespace.yaml
+      configPath: package-context.yaml

@@ -5,7 +5,7 @@ metadata:
   annotations:
     config.kubernetes.io/local-config: "true"
 maxBond: 0
-maxNumber: 3
+maxNumber: 0
 frameworks:
 - name: "treactorGo"
   image: "gcr.io/treactor/treactor-go"
