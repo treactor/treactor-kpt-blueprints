@@ -4,6 +4,8 @@ metadata:
   name: treactor-kpt
   annotations:
     config.kubernetes.io/local-config: "true"
+    kpt-repo.argocd.kpt.dev/destination-name: "in-cluster"
+    kpt-repo.argocd.kpt.dev/project-name: "default"
 info:
   description: Treactor - The Telemetry Reactor
 pipeline:
