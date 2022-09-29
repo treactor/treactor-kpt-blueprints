@@ -10,11 +10,11 @@ info:
   description: Treactor - The Telemetry Reactor
 pipeline:
   mutators:
-    - image: gcr.io/treactor/kpt-fn/create-atoms:v0.7
+    - image: gcr.io/treactor/kpt-fn/create-atoms:v0.8
       configPath: fn_create-atoms.yaml
-    - image: gcr.io/treactor/kpt-fn/gateway-api:v0.7
+    - image: gcr.io/treactor/kpt-fn/gateway-api:v0.8
       configPath: fn_gateway-api.yaml
-    - image: gcr.io/treactor/kpt-fn/ensure-sa:v0.7
-    - image: gcr.io/treactor/kpt-fn/ensure-telemetry:v0.7
+    - image: gcr.io/treactor/kpt-fn/ensure-sa:v0.8
+    - image: gcr.io/treactor/kpt-fn/ensure-telemetry:v0.8
     - image: gcr.io/kpt-fn/set-namespace:v0.4.1
       configPath: package-context.yaml
